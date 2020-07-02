@@ -1,12 +1,19 @@
 import React from 'react'
-import Router from './routes'
+import Routes from './routes'
+
 import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Router/>
+      <div className="container">
+        <div className="row d-dlex justify-content-center">
+          <div className="col-md-6 pt-3">
+            <Routes />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

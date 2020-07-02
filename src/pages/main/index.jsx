@@ -25,10 +25,10 @@ export default class Main extends Component {
         <div className="row">
           <div className="col-md-12 text-center">
               <h1 className="h3"> Pizza do dia!</h1>
-              <button className="btn btn-dark" onClick={this.promotionDay}>Corne Bacon</button>
+              <button className="btn btn-dark" onClick={this.promotionDay}>Corn Bacon</button>
           </div>
           <div className="col-md-12 text-center pt-5">
-            <Link to="/mass"className="btn btn-success">Começe a mandar sua pizza</Link>
+            <Link to="/massa"className="btn btn-success">Começe a mandar sua pizza</Link>
           </div>
         </div>
       </div>

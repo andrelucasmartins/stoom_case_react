@@ -27,8 +27,7 @@ export default class Filling extends Component {
             Massa Cream Creacker
           </label>
         </div>
-        <Link to="/" className="btn btn-danger"><FaArrowCircleLeft/> Ínicio</Link>
-        <Link to="/size" className="btn btn-danger text-center"><FaArrowCircleLeft/> Anterior</Link>
+        <Link to="/tamanho" className="btn btn-danger text-center"><FaArrowCircleLeft/> Anterior</Link>
         <Link to="/" className="btn btn-success float-right">Finalizar pedido <FaArrowCircleRight/></Link>
       </div>
     )

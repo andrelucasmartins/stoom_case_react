@@ -10,7 +10,9 @@ function App() {
       <div className="container">
         <div className="row d-dlex justify-content-center">
           <div className="col-md-6 pt-3">
-            <Routes />
+            <form>
+              <Routes />
+            </form>
           </div>
         </div>
       </div>

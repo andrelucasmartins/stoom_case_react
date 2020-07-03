@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Main from './pages/main'
 import Mass from './pages/mass'
 import Size from './pages/size'
-import  Filling from './pages/Filling'
+import Filling from './pages/filling'
 
 
 const Router = () => (

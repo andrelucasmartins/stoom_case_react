@@ -45,12 +45,12 @@ const pizza = [{
     {id: 7, name: 'Atum'}     
   ]
 }]
-server.get('/pizza', (req, resp, next) => {
+server.get('/pizza/:id', (req, resp, next) => {
   resp.json(pizza)
   next()
 })
 
-server.get('/recomendacao', (req, resp, next) => {
+server.get('/recomendacao/:name', (req, resp, next) => {
   resp.json(pizza[0].pizzas)
   next()
 })

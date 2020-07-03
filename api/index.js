@@ -1,13 +1,16 @@
 const restify = require('restify')
+const cors = require('cors')
+
 
 const server = restify.createServer({
   name: 'pizza-rest-api',
   version:'1.0.0'
 })
 
-// server.use(restify.plugins.acceptParser(server.acceptable));
-// server.use(restify.plugins.queryParser());
-// server.use(restify.plugins.bodyParser());
+server.use(cors())
+server.use(restify.plugins.acceptParser(server.acceptable));
+server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
 
 const pizza = [{
   mass: [

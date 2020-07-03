@@ -27,7 +27,7 @@ export default class Size extends Component {
             Massa Cream Cracker
           </label>
         </div>
-        <Link to="/tamanho" className="btn btn-danger"><FaArrowCircleLeft/> Anterior</Link>
+        <Link to="/massa" className="btn btn-danger"><FaArrowCircleLeft/> Anterior</Link>
         <Link to="/recheio" className="btn btn-danger float-right">Próximo <FaArrowCircleRight/></Link>
       </div>
     )

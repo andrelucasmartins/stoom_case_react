@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
+import { FaArrowCircleLeft } from 'react-icons/fa'
 
 export default class Filling extends Component {
+  redirectToTarget = () => {
+    this.props.history.push(`/`)
+  }
+
   render() {
     return (
       <div>
@@ -28,7 +32,7 @@ export default class Filling extends Component {
           </label>
         </div>
         <Link to="/tamanho" className="btn btn-danger text-center"><FaArrowCircleLeft/> Anterior</Link>
-        <Link to="/" className="btn btn-success float-right">Finalizar pedido <FaArrowCircleRight/></Link>
+        <input type="submit" value="Finalizar pedido" onClick={this.redirectToTarget} className="btn btn-success float-right"/>
       </div>
     )
   }

@@ -11,8 +11,10 @@ export default class Main extends Component {
     recomendacao: {}
   }
   async componentDidMount() {
-    const response = await api.get(`/size`)
-    this.setState({ recomendacao: response.data })
+    // const { id } = this.props.match.params
+    const response = await api.get(`/pizza`)
+    console.log(response.data.mass)
+    // this.setState({ recomendacao: response.data })
   }
 
   // loadPizza = async () =>{

@@ -6,7 +6,6 @@ import Mass from './pages/mass'
 import Size from './pages/size'
 import Filling from './pages/filling'
 
-
 const Router = () => (
   <BrowserRouter>
     <Switch>

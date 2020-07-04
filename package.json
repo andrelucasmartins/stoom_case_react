@@ -19,7 +19,7 @@
     "restify": "^8.5.1",
     "sweetalert": "^2.1.2"
   },
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

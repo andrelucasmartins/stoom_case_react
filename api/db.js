@@ -1,0 +1,39 @@
+{
+  "mass": [
+    {
+      "id": 1,
+      "name": "Pan"
+    },
+    {
+      "id": 2,
+      "name": "Normal" },
+    { "id": 3, "name": "Cream Cracker" }
+  ],
+  "size": [
+    { "id": 1, "type": 4 },
+    { "id": 2, "type": 8 },
+    { "id": 3, "type": 12 },
+    { "id": 4, "type": 16 }
+  ],
+  "filling": [
+    { "id": 1, "name": "Calabresa" },
+    { "id": 2, "name": "Lombo" },
+    { "id": 3, "name": "Atum" },
+    { "id": 4, "name": "Tomate" },
+    { "id": 5, "name": "Parmesam" },
+    { "id": 6, "name": "Gorganzola" },
+    { "id": 7, "name": "Queijo Cheddar" },
+    { "id": 8, "name": "Azeitonas" },
+    { "id": 9, "name": "Cebola" }
+  ],
+  "pizzas": [
+    {"id": 1, "name": "Calabre"},
+    {"id": 2, "name": "Atum"},  
+    {"id": 3, "name": "Alite"},    
+    {"id": 4, "name": "4 Queijos"},    
+    {"id": 5, "name": "2 Queijos"},     
+    {"id": 6, "name": "Parmesam"},     
+    {"id": 7, "name": "Escalora"}
+  ],
+  "points": [10]
+}

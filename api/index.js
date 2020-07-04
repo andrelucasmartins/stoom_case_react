@@ -7,12 +7,12 @@ const server = restify.createServer({
   version:'1.0.0'
 })
 
-server.use(cors())
 server.use(restify.plugins.acceptParser(server.acceptable));
 server.use(restify.plugins.queryParser());
 server.use(restify.plugins.bodyParser());
+server.use(cors())
 
-const pizza = [{
+const pizza = {
   mass: [
     { id: 1, name: 'Pan' },
     { id: 2, name: 'Normal' },
@@ -44,26 +44,53 @@ const pizza = [{
     {id: 6, name: 'Atum'},     
     {id: 7, name: 'Atum'}     
   ]
-}]
-server.get('/pizza/:id', (req, resp, next) => {
+}
+
+server.get('/pizza', (req, resp, next) => {
   resp.json(pizza)
   next()
 })
 
-server.get('/recomendacao/:name', (req, resp, next) => {
-  resp.json(pizza[0].pizzas)
+server.get('/recomendacao', (req, resp, next) => {
+  resp.json(pizza.mass)
   next()
 })
 
-server.get('/size', (req, resp, next) => {
-  resp.json(pizza[0].size)
-  next()
+server.get('/size/:id', (req, resp, next) => {
+  const { size } = pizza
+  const filtered = size.filter((size) => {
+    return size.id === req.params.id
+  })
+
+  if(filtered.length){
+    resp.json(filtered[0])
+
+  }else{
+    resp.status(404)
+
+    resp.json({ messsage: 'not found'})
+  }
+  // resp.json(size)
+  return next()
 })
 
 server.get('/recheio', (req, resp, next) => {
-  resp.json(pizza[0].pizzas)
+  const { pizzas } = pizza
+  resp.json(pizzas)
   next()
 })
+server.get('/recheio/:id', (req, resp, next) => {
+  const { filling } = pizza
+  const filtered = filling.filter(f => f.id === req.params.id)
+  console.log(filtered[0])
+  resp.json(filtered[0])
+  next()
+})
+
+// server.get('/test/:name/:id', (req, resp, next) => {
+//   resp.json({message: `test 1', ${req.params.name}, ${req.params.id}`})
+//   next()
+// })
 
 
 server.listen(3001, () => {

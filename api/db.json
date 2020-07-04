@@ -20,7 +20,7 @@
     { "id": 2, "name": "Lombo" },
     { "id": 3, "name": "Atum" },
     { "id": 4, "name": "Tomate" },
-    { "id": 5, "name": "Parmesam" },
+    { "id": 5, "name": "Parmesão" },
     { "id": 6, "name": "Gorganzola" },
     { "id": 7, "name": "Queijo Cheddar" },
     { "id": 8, "name": "Azeitonas" },
@@ -32,7 +32,7 @@
     {"id": 3, "name": "Alite"},    
     {"id": 4, "name": "4 Queijos"},    
     {"id": 5, "name": "2 Queijos"},     
-    {"id": 6, "name": "Parmesam"},     
+    {"id": 6, "name": "Parmesão"},     
     {"id": 7, "name": "Escalora"}
   ],
   "points": [10]

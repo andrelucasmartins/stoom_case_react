@@ -38,13 +38,16 @@ export default class Mass extends Component {
         <div className="form-check card px-md-5 py-3 mb-2" key={list.id}>
           <input 
               type="radio"
-              name="name"
+              name="mass"
               value={list.name}
               checked={this.state.value === list.name}
               onChange={this.handleChange}
               className="form-check-input"
+              id={list.id}
               />
-          {list.name}
+          <label className="form-check-label" htmlFor={list.name}>
+            {list.name}
+          </label>
         </div>
         ))}
         <Link to="/" className="btn btn-danger"><FaArrowCircleLeft/> Anterior</Link>

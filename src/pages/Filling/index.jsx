@@ -2,35 +2,49 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import { FaArrowCircleLeft } from 'react-icons/fa'
-
+import api from '../../services/api'
 export default class Filling extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      value: '',
+      fillList: []
+    }
+
+  }
+
+  componentDidMount() {
+    this.fillList()
+  }
+
+  fillList = async () => {
+    const res = await api.get('/filling')
+    this.setState({ fillList: res.data })
+  }
+
   redirectToTarget = () => {
     this.props.history.push(`/`)
   }
-
+  
   render() {
+    const { fillList } = this.state
     return (
       <div>
         <h1 className="h3 text-center">Recheio</h1>
-        <p>Escolha o tipo de massa de sua pizza</p>
-        <div className="form-check card px-md-5 py-3 mb-2">
-          <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked/>
-          <label className="form-check-label control-form" for="exampleRadios1">
-            Massa Pan
-          </label>
+        <p>Escolha o recheio da pizza</p>
+        {fillList.map(list => (
+        <div className="form-check card px-md-5 py-3 mb-2" key={list.id}>
+          <input 
+              type="checkbox"
+              name="size"
+              value={list.name}
+              onChange={this.fillChange}
+              className="form-check-input"
+              />
+          {list.name}
         </div>
-        <div className="form-check card px-md-5 py-3 mb-2">
-          <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-          <label className="form-check-label" for="exampleRadios2">
-            Massa Normal
-          </label>
-        </div>
-        <div className="form-check card px-md-5 py-3 mb-2">
-          <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"/>
-          <label className="form-check-label" for="exampleRadios3">
-            Massa Cream Creacker
-          </label>
-        </div>
+        ))}
         <Link to="/tamanho" className="btn btn-danger text-center"><FaArrowCircleLeft/> Anterior</Link>
         <input type="submit" value="Finalizar pedido" onClick={this.redirectToTarget} className="btn btn-success float-right"/>
       </div>

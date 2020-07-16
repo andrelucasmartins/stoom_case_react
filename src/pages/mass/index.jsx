@@ -35,7 +35,8 @@ export default class Mass extends Component {
         <h1 className="h3 text-center">Massa</h1>
         <p>Escolha o tipo de massa de sua pizza</p>
         {massList.map(list => (
-        <div className="form-check card px-md-5 py-3 mb-2" key={list.id}>
+        <div className="form-check card px-md-5 p-3 mb-2" key={list.id}>
+          <label className="form-check-label" htmlFor={list.id}>
           <input 
               type="radio"
               name="mass"
@@ -45,7 +46,7 @@ export default class Mass extends Component {
               className="form-check-input"
               id={list.id}
               />
-          <label className="form-check-label" htmlFor={list.name}>
+          
             {list.name}
           </label>
         </div>
